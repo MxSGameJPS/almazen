@@ -12,6 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: "https://almazenbemestar.com.br",
   title: "Alma Zen Spa | Massagem e Bem-estar em São Paulo",
   description: "Descubra o Spa Alma Zen em São Paulo. Oferecemos Massagem Anti-estresse, Shiatsu, Acupuntura e Drenagem Linfática. Agende sua sessão e sinta o equilíbrio total.",
   keywords: ["Spa São Paulo", "Massagem Relaxante", "Shiatsu SP", "Acupuntura São Paulo", "Drenagem Linfática", "Bem-estar", "Relaxamento", "Alma Zen Spa"],

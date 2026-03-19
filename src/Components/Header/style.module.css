@@ -66,6 +66,10 @@
   padding: 10px 24px;
   border-radius: 99px;
   font-weight: 600 !important;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
   transition: all 0.3s !important;
 }
 
