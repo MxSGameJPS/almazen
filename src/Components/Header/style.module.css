@@ -42,6 +42,24 @@
   color: #b89154;
 }
 
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.socialLink:hover {
+  color: #b89154 !important;
+  transform: translateY(-2px);
+}
+
 .cta {
   background: #b89154;
   color: #fff !important;
