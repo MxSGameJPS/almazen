@@ -4,9 +4,16 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  padding: 15px 0;
+  background: transparent;
+  transition: all 0.4s ease-out;
+}
+
+.header.scrolled {
+  background: rgba(13, 42, 61, 0.95); /* Profundo Azul Médio com Transparência */
   backdrop-filter: blur(10px);
-  padding: 10px 0;
-  transition: all 0.3s;
+  padding: 8px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .container {
@@ -22,6 +29,11 @@
   width: auto;
   height: 80px;
   display: block;
+  transition: height 0.4s ease;
+}
+
+.scrolled .logo img {
+  height: 60px;
 }
 
 .nav {
