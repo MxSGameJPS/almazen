@@ -17,6 +17,7 @@ export default function Header() {
         <nav className={styles.nav}>
           <a href="#home">Home</a>
           <a href="#servicos">Serviços</a>
+          <a href="#yoga">Yoga</a>
           <a href="#planos">Planos</a>
           <a 
             href="https://www.instagram.com/almazen.massagem/" 

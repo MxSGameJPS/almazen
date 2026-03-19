@@ -1,0 +1,131 @@
+.section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #153d58 0%, #0d2a3d 100%);
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+.infoGroup {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  color: #b89154;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(184, 145, 84, 0.3);
+  padding-bottom: 15px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.optionRow {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.freq {
+  font-weight: 700;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.prices {
+  display: flex;
+  gap: 15px;
+}
+
+.priceBtn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.priceBtn:hover {
+  background: #b89154;
+  border-color: #b89154;
+  transform: translateY(-2px);
+}
+
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  opacity: 0.6;
+}
+
+.value {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.obs {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .prices {
+    flex-direction: column;
+  }
+}
