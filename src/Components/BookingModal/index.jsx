@@ -8,7 +8,6 @@ export default function BookingModal({ isOpen, onClose }) {
   const [category, setCategory] = useState('');
   const [selectedItem, setSelectedItem] = useState('');
   const [selectedFreq, setSelectedFreq] = useState(''); // For Yoga
-  const [selectedPlanServices, setSelectedPlanServices] = useState([]); // For Plan services
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
@@ -19,7 +18,6 @@ export default function BookingModal({ isOpen, onClose }) {
       setCategory('');
       setSelectedItem('');
       setSelectedFreq('');
-      setSelectedPlanServices([]);
     }
   }, [isOpen]);
 
@@ -30,10 +28,7 @@ export default function BookingModal({ isOpen, onClose }) {
     let message = 'Olá! Gostaria de agendar um horário.';
 
     if (category === 'Planos') {
-      const servicesText = selectedPlanServices.length > 0 
-        ? `. Tenho interesse em: ${selectedPlanServices.join(', ')}.` 
-        : '.';
-      message = `Olá! Gostaria de garantir o Plano Alma Zen de ${selectedItem}${servicesText}`;
+      message = `Olá! Gostaria de garantir o Plano Alma Zen de ${selectedItem}.`;
     } else if (category === 'Yoga') {
       message = `Olá! Gostaria de agendar uma Aula de Yoga: ${selectedItem} (${selectedFreq}).`;
     } else if (selectedItem) {
@@ -43,12 +38,6 @@ export default function BookingModal({ isOpen, onClose }) {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
     onClose();
-  };
-
-  const togglePlanService = (service) => {
-    setSelectedPlanServices(prev => 
-      prev.includes(service) ? prev.filter(s => s !== service) : [...prev, service]
-    );
   };
 
   const getSubItems = () => {
@@ -72,7 +61,7 @@ export default function BookingModal({ isOpen, onClose }) {
         <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
           <div className={styles.field}>
             <label>O que você procura?</label>
-            <select value={category} onChange={(e) => { setCategory(e.target.value); setSelectedItem(''); setSelectedPlanServices([]); }}>
+            <select value={category} onChange={(e) => { setCategory(e.target.value); setSelectedItem(''); }}>
               <option value="">Selecione uma categoria</option>
               <option value="Massagens">Massagens</option>
               <option value="Estética Corporal">Estética Corporal</option>
@@ -97,17 +86,14 @@ export default function BookingModal({ isOpen, onClose }) {
 
           {category === 'Planos' && selectedItem && (
             <div className={styles.field}>
-              <label>Selecione os serviços que deseja incluir:</label>
-              <div className={styles.planServicesGrid}>
+              <p className={styles.planInfo}>
+                Neste plano, você poderá escolher <strong>qualquer um</strong> destes serviços em suas sessões:
+              </p>
+              <div className={styles.planServicesList}>
                 {SERVICOS_PLANO.map(service => (
-                  <label key={service} className={styles.checkboxLabel}>
-                    <input 
-                      type="checkbox" 
-                      checked={selectedPlanServices.includes(service)}
-                      onChange={() => togglePlanService(service)}
-                    />
-                    <span>{service}</span>
-                  </label>
+                  <div key={service} className={styles.planServiceItem}>
+                    <span>✦</span> {service}
+                  </div>
                 ))}
               </div>
             </div>

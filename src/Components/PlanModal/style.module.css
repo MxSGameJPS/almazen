@@ -66,111 +66,93 @@
   font-size: 0.95rem;
 }
 
-.selectionInfo {
-  margin-top: 10px;
-  color: #64748b;
-  font-size: 0.95rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
+.infoText {
+  margin-top: 15px;
+  color: #153d58;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
-.counter {
-  font-weight: 700;
+.infoText strong {
   color: #b89154;
-  font-size: 1.1rem;
 }
 
 .serviceList {
-  padding: 20px;
-  max-height: 350px;
+  padding: 20px 40px;
+  max-height: 300px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+  background: #f8fafc;
 }
 
-.serviceItem {
+.serviceItemStatic {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 15px 20px;
-  background: #f8fafc;
-  border: 2px solid #e2e8f0;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.serviceItem.active {
-  border-color: #b89154;
-  background: #fffcf5;
-}
-
-.serviceItem.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  background: #f1f5f9;
-}
-
-.checkbox {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 22px;
-  height: 22px;
-  border: 2px solid #b89154;
-  border-radius: 6px;
-  background-color: transparent;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
-}
-
-.checkbox:checked {
-  background-color: #b89154;
-}
-
-.checkbox:checked::after {
-  content: '✓';
-  position: absolute;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.bullet {
+  color: #b89154;
+  font-size: 0.8rem;
 }
 
 .serviceName {
   font-size: 0.95rem;
-  font-weight: 600;
-  color: #2c3e50;
+  font-weight: 500;
+  color: #475569;
 }
 
 .footer {
-  padding: 20px 30px;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.planSummary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.totalPrice {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #153d58;
+}
+
+.perSession {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
 }
 
 .confirmButton {
   width: 100%;
-  background: linear-gradient(135deg, #b89154, #d4b07c);
+  background: #b89154;
   color: white;
-  padding: 16px;
+  padding: 18px;
   border-radius: 12px;
   border: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.confirmButton:disabled {
-  background: #e9ecef;
-  color: #adb5bd;
-  cursor: not-allowed;
+.confirmButton:hover {
+  background: #d4b07c;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(184, 145, 84, 0.3);
 }
 
 .confirmButton:not(:disabled):hover {
