@@ -33,10 +33,10 @@ export const metadata = {
     siteName: "Alma Zen Spa",
     images: [
       {
-        url: "/hero.png",
+        url: "/compartilhamento.webp",
         width: 1200,
         height: 630,
-        alt: "Alma Zen Spa - Ambiente de Relaxamento",
+        alt: "Alma Zen Spa - Relaxamento e Bem-estar",
       },
     ],
     locale: "pt_BR",
@@ -46,7 +46,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Alma Zen Spa | Massagem e Bem-estar em São Paulo",
     description: "Massagens Relaxantes e Terapias em São Paulo. Encontre sua paz no Alma Zen.",
-    images: ["/hero.png"],
+    images: ["/compartilhamento.webp"],
   },
   robots: {
     index: true,
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "DaySpa",
     "name": "Alma Zen Spa",
-    "image": "https://almazenbemestar.com.br/hero.png",
+    "image": "https://almazenbemestar.com.br/hero.webp",
     "@id": "https://almazenbemestar.com.br",
     "url": "https://almazenbemestar.com.br",
     "telephone": "+5511944015835",

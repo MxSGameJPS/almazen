@@ -3,10 +3,10 @@ import Image from 'next/image';
 import styles from './style.module.css';
 
 const images = [
-  '/hero.png',
-  '/hero1.png',
-  '/hero2.png',
-  '/hero3.png'
+  '/hero.webp',
+  '/hero1.webp',
+  '/hero2.webp',
+  '/hero3.webp'
 ];
 
 export default function Hero() {
